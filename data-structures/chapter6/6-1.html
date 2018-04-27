@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>集合</title>
+</head>
+<body>
+
+  <script>
+    function Set() {
+      var items = {}
+      this.has = function(value) {
+        return items.hasOwnProperty(value)
+      }
+      this.add = function(value) {
+        if(!this.has(value)) {
+          items[value] = value
+          return true
+        }
+        return false
+      }
+      this.remove = function(value) {
+        if(this.has(value)) {
+          delete items[value]
+          return true
+        }
+        return false
+      }
+      this.clear = function(){
+        items = {}
+      }
+      this.size = function() {
+        return Object.keys(items).length
+      }
+      this.values = function() {
+        return Object.keys(items)
+      }
+    }    
+    var set = new Set()
+    set.add(1)
+    set.add(2)
+
+  </script>
+</body>
+</html>
