@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>插入排序</title>
+</head>
+<body>
+  <script>
+    this.insertionSort = function () {
+        var length = array.length, //{1}
+          j, temp;
+        for (var i = 1; i < length; i++) { //{2}
+          j = i; //{3}
+          temp = array[i]; //{4}
+          while (j > 0 && array[j - 1] > temp) { //{5}
+            array[j] = array[j - 1]; //{6}
+            j--;
+          }
+          array[j] = temp; //{7}
+        }
+      }
+  </script>
+</body>
+</html>

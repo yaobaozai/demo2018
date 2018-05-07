@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>选择排序</title>
+</head>
+<body>
+  <script>
+    this.selectionSort = function() {
+      var length = array.length,
+          indexmin
+      for (var i = 0; i < length - 1; j++) {
+        indexMin = i
+        for(var j=i; j < length; j++) {
+          if(array[indexMin] > array[j]) {
+            indexMin = j
+          }
+        }
+        if(i!== indexMin){
+          swap(i,indexMin)
+        }
+
+      }
+    }
+  </script>
+</body>
+</html>
