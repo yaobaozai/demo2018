@@ -36,7 +36,10 @@ export default {
   },
   beforeRouteLeave (to, from, next) {
     console.log('todo leave enter')
-    next()
+    if (window.confirm('are you sure?')) {
+      next()
+    }
+    // next()
   },
   props: ['id'],
   mounted () {
