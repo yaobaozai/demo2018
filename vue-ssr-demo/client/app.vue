@@ -2,7 +2,12 @@
   <div id="app">
     <div id="cover"></div>
     <Header></Header>
-    <Todo></Todo>
+    <router-link :to="{name: 'app', params: {id: 123}}">app123</router-link>
+    <router-link :to="{name: 'app', params: {id: 445}}">app445</router-link>
+    <router-link to="/login">login</router-link>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
     <Footer></Footer>
   </div>
 </template>
